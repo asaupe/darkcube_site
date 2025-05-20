@@ -90,6 +90,14 @@ a:hover {
     color: var(--secondary-blue);
 }
 
+/* Make all headers in dark sections white for consistency */
+.legacy-section h2,
+.why-us-section h2,
+.technology-section h2,
+.contact-section h2 {
+    color: var(--text-primary);  /* White text */
+}
+
 /* Header styles */
 header {
     background-color: var(--primary-dark);
@@ -329,6 +337,19 @@ section {
     background-color: var(--primary-dark);
     color: var(--text-primary);
     padding: var(--spacing-xl) 0;
+}
+
+.why-us-section .feature {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.why-us-section .feature h3 {
+    color: var(--text-primary); /* Changed from tertiary-blue to white for consistency */
+}
+
+.why-us-section .feature-icon {
+    color: var(--tertiary-blue);
 }
 
 .differentiators {
@@ -706,6 +727,7 @@ footer {
 .darkcube-box {
     width: 180px;
     height: 180px;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -777,6 +799,170 @@ footer {
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: var(--border-radius);
     margin: var(--spacing-lg) 0;
+}
+
+/* Configuration Logic Layer section - Simplified to three boxes */
+.configuration-section {
+    background-color: var(--neutral-light);
+    padding: var(--spacing-xl) 0;
+}
+
+/* Apply grid layout for three boxes */
+.config-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.config-feature {
+    background-color: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.config-feature:hover {
+    transform: translateY(-5px);
+}
+
+.config-feature .feature-icon {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-md);
+}
+
+.config-feature h3 {
+    color: var(--primary-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+.config-workflow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) auto;
+    max-width: 900px;
+    flex-wrap: wrap;
+}
+
+.config-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 0 1 auto;
+}
+
+.config-icon {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+}
+
+.config-icon i {
+    font-size: 3.5rem;
+    color: var(--primary-dark);
+}
+
+.config-icon.admin i {
+    color: #2ecc71; /* Green gear icon */
+}
+
+.config-icon.db i {
+    color: var(--primary-dark); /* Black database icon */
+}
+
+.workflow-arrow {
+    color: #3498db; /* Blue arrows */
+    font-size: 2.5rem;
+    margin: 0 var(--spacing-sm);
+    flex-shrink: 1;
+}
+
+.config-workflow-container {
+    position: relative;
+    border: 2px dashed var(--primary-blue);
+    border-radius: 20px;
+    padding: 30px 20px 20px;
+    background-color: rgba(0, 102, 204, 0.05);
+    margin: var(--spacing-xl) auto;
+    max-width: 900px;
+}
+
+.config-workflow-label {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--neutral-light);
+    color: var(--primary-blue);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    white-space: nowrap;
+    border: 1px solid var(--primary-blue);
+}
+
+/* Adjust margins for the workflow inside container */
+.config-workflow-container .config-workflow {
+    margin: 0 auto;
+}
+
+.ai-powered-section {
+    background-color: var(--primary-dark);
+    color: var(--text-primary);
+    padding: var(--spacing-xl) 0;
+}
+
+.ai-content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ai-description {
+    flex: 1;
+}
+
+.ai-tagline {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--tertiary-blue);
+    margin-bottom: var(--spacing-md);
+}
+
+.ai-icon {
+    flex: 0 0 auto;
+}
+
+.ai-brain-icon {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at center, rgba(102, 204, 255, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: pulse-glow 3s infinite;
+}
+
+.ai-brain-icon i {
+    font-size: 5rem;
+    color: var(--tertiary-blue);
 }
 
 /* Responsive adjustments for diagram */
@@ -864,5 +1050,22 @@ footer {
 
     .section-navigator {
         display: none; /* Hide on mobile */
+    }
+
+    .config-workflow {
+        flex-direction: column;
+    }
+    
+    .workflow-arrow {
+        transform: rotate(90deg);
+        margin: var(--spacing-sm) 0;
+    }
+
+    .ai-content {
+        flex-direction: column-reverse;
+    }
+    
+    .ai-icon {
+        margin-bottom: var(--spacing-lg);
     }
 }

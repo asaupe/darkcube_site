@@ -26,12 +26,11 @@
             </div>
             <nav>
                 <ul>
-                    <!-- Make sure these match your section IDs exactly -->
-                    <li><a href="#product">Product</a></li>
-                    <li><a href="#black-box">Black Box</a></li> <!-- Update if you have a "why-us" section instead -->
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#why-choose">Why Choose</a></li>
+                    <li><a href="#legacy">Legacy Risk</a></li>
                     <li><a href="#use-cases">Use Cases</a></li>
-                    <li><a href="#technology">Technology</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="#contact" class="cta-secondary">Contact</a></li>
                 </ul>
             </nav>
@@ -39,43 +38,151 @@
     </header>
 
     <main>
-        <!-- Hero Section - Updated with two paragraphs -->
-        <section id="hero" class="hero-section">
+        <!-- Enhanced Hero Section with Technology and AI Elements -->
+        <section id="hero" class="hero-section expanded-hero">
             <div class="container">
-                <h1>The Future of Commodities Back Office</h1>
-                <p class="subhead">A Black Box system that perfectly mirrors your legacy interfaces while modernizing what's inside. Same inputs, same outputs, completely transformed operations. </p>
-                <p class="subhead">We don't rebuild. We learn.</p>
+                <h1>A Smarter Way to Replace Legacy Back Office Systems</h1>
+                <p class="tagline">We don't rebuild. We learn.</p>
+                
+                <p class="subhead">DARKCUBE learns how your legacy system behaves by analyzing thousands of historical inputs and outputs. It builds a behavioral twin that preserves your interfaces and data flows, all running on modern, flexible infrastructure.</p>
+                
+                <!-- Workflow Diagram embedded in hero -->
+                <div class="hero-workflow-diagram">
+                    <div class="diagram-container">
+                        <!-- Input System -->
+                        <div class="diagram-item source">
+                            <div class="icon-box">
+                                <i class="fas fa-file-invoice"></i>
+                            </div>
+                            <h4>Legacy<br>Trade + Report</h4>
+                        </div>
+                        
+                        <div class="connection-wrapper">
+                            <i class="fas fa-arrow-right connection-arrow pulse"></i>
+                        </div>
+                        
+                        <!-- Center DarkCube Box -->
+                        <div class="diagram-item center">
+                            <div class="behavioral-model-label">Behavioral Model</div>
+                            <div class="darkcube-box">
+                                <div class="cube-glow"></div>
+                                <img src="assets/images/DarkCube_Systems_Name.png" alt="DARKCUBE" class="darkcube-logo">
+                            </div>
+                        </div>
+                        
+                        <div class="connection-wrapper">
+                            <i class="fas fa-arrow-right connection-arrow pulse"></i>
+                        </div>
+                        
+                        <!-- Modern System Replica Container -->
+                        <div class="modern-system-container">
+                            <div class="modern-system-label">Modern System Replica</div>
+                            <div class="modern-outputs">
+                                <div class="diagram-item output">
+                                    <div class="icon-box blue">
+                                        <i class="fas fa-desktop"></i>
+                                    </div>
+                                    <h4>Modern UI</h4>
+                                </div>
+                                
+                                <div class="diagram-item output">
+                                    <div class="icon-box green">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <h4>Modular<br>Back-Office</h4>
+                                </div>
+                                
+                                <div class="diagram-item output">
+                                    <div class="icon-box purple">
+                                        <i class="fas fa-cog"></i>
+                                    </div>
+                                    <h4>Configurable</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ai-highlight">
+                    <p class="ai-condensed-tagline">Powered by AI, not guesswork</p>
+                    <p class="ai-condensed-text">Our system analyzes millions of historical trade-report pairs to build a perfect behavioral twin of your legacy system, delivering the same outputs with modern technology.</p>
+                </div>
+                
                 <div class="cta-group">
                     <a href="#contact" class="cta-primary">Request Demo</a>
-                    <a href="#black-box" class="cta-secondary">How It Works</a>
                 </div>
             </div>
         </section>
 
-        <!-- Product Overview - Refocused on compatibility -->
-        <section id="product" class="product-section">
+        <!-- Why Operations Teams Choose DARKCUBE - Combined Section -->
+        <section id="why-choose" class="why-choose-section">
             <div class="container">
-                <h2>Built to Integrate, Not Disrupt</h2>
-                <div class="product-features">
-                    <div class="feature">
-                        <i class="feature-icon fa-solid fa-sync-alt"></i>
-                        <h3>Format Preservation</h3>
-                        <p>Maintains full compatibility with your existing file formats, APIs, and data structures, no changes needed to upstream or downstream systems.</p>
+                <h2>Why Operations Teams Choose DARKCUBE</h2>
+                
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <i class="benefit-icon fa-solid fa-fingerprint"></i>
+                        <h3>Mirrors legacy behavior</h3>
+                        <p>Same inputs, same outputs, our behavioral twin preserves all your existing interfaces and data flows.</p>
                     </div>
-                    <div class="feature">
-                        <i class="feature-icon fa-solid fa-chart-line"></i>
-                        <h3>Silent Reconciliation</h3>
-                        <p>Performs continuous reconciliation between legacy systems without changing their behavior.</p>
+                    
+                    <div class="benefit-item">
+                        <i class="benefit-icon fa-solid fa-sliders"></i>
+                        <h3>Configurable logic engine</h3>
+                        <p>Change business rules, calculations, and formatting without code or development cycles.</p>
                     </div>
-                    <div class="feature">
-                        <i class="feature-icon fa-solid fa-robot"></i>
-                        <h3>Exception Mirroring</h3>
-                        <p>Handles exceptions exactly as your legacy system would—with modern automation behind the scenes.</p>
+                    
+                    <div class="benefit-item">
+                        <i class="benefit-icon fa-solid fa-check-double"></i>
+                        <h3>Validated in parallel</h3>
+                        <p>Run alongside your legacy system with continuous reconciliation until you're ready to transition.</p>
                     </div>
-                    <div class="feature">
-                        <i class="feature-icon fa-solid fa-code"></i>
-                        <h3>Shadow Processing</h3>
-                        <p>Runs in parallel with existing systems until you're ready to fully transition—zero risk cutover.</p>
+                    
+                    <div class="benefit-item">
+                        <i class="benefit-icon fa-solid fa-link"></i>
+                        <h3>No downstream changes</h3>
+                        <p>Keep all your interfaces intact, no changes required to connected systems or processes.</p>
+                    </div>
+                </div>
+                
+                <!-- Configuration Visual -->
+                <div class="config-visual-container">
+                    <div class="config-visual-header">
+                        <h3>Configuration Without Complexity</h3>
+                        <p>Rules, outputs, and schedules are editable through structured, versioned configurations, stored in files or managed in your system's database.</p>
+                    </div>
+                    
+                    <div class="config-workflow-container">
+                        <div class="config-workflow">
+                            <div class="config-step">
+                                <div class="config-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <h4>Configurable Rules</h4>
+                            </div>
+                            
+                            <div class="workflow-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            
+                            <div class="config-step">
+                                <div class="config-icon admin">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h4>Admin Interface</h4>
+                            </div>
+                            
+                            <div class="workflow-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            
+                            <div class="config-step">
+                                <div class="config-icon db">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h4>Live Updates</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -110,65 +217,6 @@
             </div>
         </section>
 
-        <!-- Black Box Approach - Expanded and prioritized -->
-        <section id="black-box" class="black-box-section">
-            <div class="container">
-                <h2>The DARKCUBE Black Box Engine</h2>
-                <p class="section-intro">We don't replace your systems. We clone their interfaces and rebuild the core.</p>
-                <div class="black-box-features">
-                    <div class="feature">
-                        <i class="feature-icon fa-solid fa-exchange-alt"></i>
-                        <h3>Interface-Compatible by Design</h3>
-                        <p>DARKCUBE mirrors your legacy system’s inputs and outputs exactly, so your upstream and downstream systems continue to operate.</p>
-                    </div>
-                    <div class="feature">
-                        <i class="feature-icon fa-solid fa-magic"></i>
-                        <h3>Internal Transformation</h3>
-                        <p>Inside the Black Box, your operations are handled by modern, configurable workflows that eliminate technical debt.</p>
-                    </div>
-                    <div class="feature">
-                        <i class="feature-icon fa-solid fa-cube"></i>
-                        <h3>Zero Disruption</h3>
-                        <p>Implement without changing adjacent systems, retraining users, or modifying established business processes.</p>
-                    </div>
-                    <div class="feature">
-                        <i class="feature-icon fa-solid fa-cogs"></i>
-                        <h3>Highly Configurable</h3>
-                        <p>Fine-tune operation through configuration, not coding—adapt to your specific business needs without custom development.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- How We're Different - Focus on replacement strategy -->
-        <section id="why-us" class="why-us-section">
-            <div class="container">
-                <h2>Why Teams Choose DARKCUBE</h2>
-                <div class="differentiators">
-                    <div class="feature">
-                        <i class="feature-icon fa-solid fa-fingerprint"></i>
-                        <h3>System Fingerprinting</h3>
-                        <p>We analyze your existing I/O patterns to create a perfect behavioral twin of your legacy systems.</p>
-                    </div>
-                    <div class="feature">
-                        <i class="feature-icon fa-solid fa-eye"></i>
-                        <h3>Operational Transparency</h3>
-                        <p>See what's happening inside the black box with advanced monitoring and controls.</p>
-                    </div>
-                    <div class="feature">
-                        <i class="feature-icon fa-solid fa-puzzle-piece"></i>
-                        <h3>Component Replacement</h3>
-                        <p>Replace systems one piece at a time instead of risky "big bang" migrations.</p>
-                    </div>
-                    <div class="feature">
-                        <i class="feature-icon fa-solid fa-unlock"></i>
-                        <h3>Evolution Pathway</h3>
-                        <p>Gradually modernize interfaces after the Black Box is established—at your own pace.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Use Cases -->
         <section id="use-cases" class="use-cases-section">
             <div class="container">
@@ -198,184 +246,6 @@
             </div>
         </section>
 
-        <!-- Technology - Focus on configuration -->
-        <section id="technology" class="technology-section">
-            <div class="container">
-                <h2>How Our Black Box Approach Works</h2>
-                
-                <div class="section-intro">
-                    <p>DarkCube ingests historical inputs and outputs from legacy systems and learns how they behave.
-                    We use AI to model the logic driving legacy reports — no access to source code needed.</p>
-                </div>
-                
-                <div class="workflow-diagram">
-                    <div class="diagram-container">
-                        <!-- Input System -->
-                        <div class="diagram-item source">
-                            <div class="icon-box">
-                                <i class="fas fa-file-invoice"></i>
-                            </div>
-                            <h4>Legacy<br>Trade + Report</h4>
-                        </div>
-                        
-                        <!-- Connection Arrow with Animation -->
-                        <div class="connection-wrapper">
-                            <i class="fas fa-arrow-right connection-arrow pulse"></i>
-                        </div>
-                        
-                        <!-- Center DarkCube Box -->
-                        <div class="diagram-item center">
-                            <div class="behavioral-model-label">Behavioral Model</div>
-                            <div class="darkcube-box">
-                                <div class="cube-glow"></div>
-                                <img src="assets/images/DarkCube_Systems_Name.png" alt="DARKCUBE" class="darkcube-logo">
-                            </div>
-                        </div>
-                        
-                        <!-- Connection Arrow with Animation -->
-                        <div class="connection-wrapper">
-                            <i class="fas fa-arrow-right connection-arrow pulse"></i>
-                        </div>
-                        
-                        <!-- Modern System Replica Container -->
-                        <div class="modern-system-container">
-                            <div class="modern-system-label">Modern System Replica</div>
-                            <div class="modern-outputs">
-                                <div class="diagram-item output">
-                                    <div class="icon-box blue">
-                                        <i class="fas fa-desktop"></i>
-                                    </div>
-                                    <h4>Modern UI</h4>
-                                </div>
-                                
-                                <div class="diagram-item output">
-                                    <div class="icon-box green">
-                                        <i class="fas fa-database"></i>
-                                    </div>
-                                    <h4>Modular<br>Back-Office</h4>
-                                </div>
-                                
-                                <div class="diagram-item output">
-                                    <div class="icon-box purple">
-                                        <i class="fas fa-cog"></i>
-                                    </div>
-                                    <h4>Configurable</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mobile-only simplified explanation -->
-                <div class="mobile-workflow-explanation">
-                    <p>DarkCube ingests historical inputs and outputs from legacy systems like GMI and learns how they behave.
-                    We use AI to model the logic driving legacy reports — no access to source code needed.</p>
-                    <p><strong>Input:</strong> Legacy Trade & Report → <strong>Process:</strong> DARKCUBE → <strong>Output:</strong> Modern UI, Back-Office Processes, Easy Configuration</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Configurable Logic Layer Section -->
-        <section id="configuration" class="configuration-section">
-            <div class="container">
-                <h2>Configurable Logic Layer</h2>
-                
-                <div class="section-intro">
-                    <p>Every firm has unique requirements — from how margin is calculated to when reports are delivered. DARKCUBE gives you full control through a flexible, structured configuration system.</p>
-                </div>
-
-                <!-- Configuration Workflow Diagram -->
-                <div class="config-workflow-container">
-                    <div class="config-workflow-label">Configuration Evolution</div>
-                    <div class="config-workflow">
-                        <div class="config-step">
-                            <div class="config-icon">
-                                <i class="fas fa-file-alt"></i>
-                            </div>
-                            <h3>Editable<br>Template</h3>
-                        </div>
-                        
-                        <div class="workflow-arrow">
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                        
-                        <div class="config-step">
-                            <div class="config-icon admin">
-                                <i class="fas fa-cogs"></i>
-                            </div>
-                            <h3>Admin<br>UI</h3>
-                        </div>
-                        
-                        <div class="workflow-arrow">
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                        
-                        <div class="config-step">
-                            <div class="config-icon db">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <h3>Live<br>Configuration</h3>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="config-features">
-                    <div class="config-feature">
-                        <i class="feature-icon fa-solid fa-sliders"></i>
-                        <h3>Flexible Configuration</h3>
-                        <p>Settings can be managed in a simple, readable format at the start (ideal for onboarding or prototyping), and easily extended into database-driven configurations as your system grows.</p>
-                    </div>
-                    
-                    <div class="config-feature">
-                        <i class="feature-icon fa-solid fa-bolt"></i>
-                        <h3>Business User Control</h3>
-                        <p>This means your team can adjust business logic, trade rules, and output formatting without custom code or downtime.</p>
-                    </div>
-                    
-                    <div class="config-feature">
-                        <i class="feature-icon fa-solid fa-calendar-check"></i>
-                        <h3>Zero Deployment Delays</h3>
-                        <p>No more waiting for developers — just change what you need, test it, and go.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Powered by AI Section -->
-        <section id="ai-powered" class="ai-powered-section">
-            <div class="container">
-                <h2>Powered by AI</h2>
-                
-                <div class="ai-content">
-                    <div class="ai-description">
-                        <p class="ai-tagline">DarkCube doesn't guess.</p>
-                        <p>It uses AI to analyze how your legacy system behaves — learning from thousands of historical trade-report pairs.</p>
-                        <p>The result: a system that mirrors your current outputs but runs on modern infrastructure.</p>
-                    </div>
-                    
-                    <div class="ai-icon">
-                        <div class="ai-brain-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section (Simplified) -->
-        <section id="about" class="about-section">
-            <div class="container">
-                <h2>Built by Back Office Engineers</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Our founders bring decades of experience in clearing, trade systems, and infrastructure. We've built DARKCUBE with a mission to eliminate complexity and improve transparency in commodity markets.</p>
-                        <p>Unlike bloated enterprise suites, we're lean, fast, and deployable. We believe in building technology that solves real problems without creating new ones.</p>
-                        <a href="about.html" class="cta-secondary">Meet Our Team</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
             <div class="container">
@@ -383,30 +253,48 @@
                 <p class="section-intro">Schedule a demo to see how our Black Box approach can transform your back office.</p>
                 
                 <div class="contact-form">
-                    <form id="demo-request">
+                    <form id="demo-request" action="https://formspree.io/f/xrgvldpw" method="POST">
+                        <!-- Hidden honeypot field to catch bots -->
+                        <input type="text" name="_gotcha" style="display:none">
+                        
+                        <!-- Form subject customization -->
+                        <input type="hidden" name="_subject" value="New Demo Request from DarkCube Website">
+                        
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
                         </div>
+                        
                         <div class="form-group">
                             <label for="company">Company</label>
                             <input type="text" id="company" name="company" required>
                         </div>
+                        
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" required>
                         </div>
+                        
                         <div class="form-group">
                             <label for="message">Tell us about your legacy systems</label>
                             <textarea id="message" name="message" rows="4"></textarea>
                         </div>
+                        
+                        <!-- Custom field to help filter spam -->
+                        <div class="form-group">
+                            <label for="how-found">How did you hear about us?</label>
+                            <select id="how-found" name="referral_source">
+                                <option value="">Please select...</option>
+                                <option value="search">Search Engine</option>
+                                <option value="referral">Referral</option>
+                                <option value="social">Social Media</option>
+                                <option value="conference">Conference/Event</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
                         <button type="submit" class="cta-primary">Request Demo</button>
                     </form>
-                </div>
-                
-                <div class="alternative-contacts">
-                    <p>Or contact us directly:</p>
-                    <a href="mailto:info@darkcubesystems.com" class="cta-secondary">info@darkcubesystems.com</a>
                 </div>
             </div>
         </section>
@@ -418,32 +306,7 @@
                 <div class="logo">
                     <img src="assets/images/DarkCube_Systems_Name.png" alt="DARKCUBE">
                 </div>
-                <div class="footer-links">
-                    <div class="link-group">
-                        <h4>Product</h4>
-                        <ul>
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#integrations">Integrations</a></li>
-                            <li><a href="#pricing">Pricing</a></li>
-                        </ul>
-                    </div>
-                    <div class="link-group">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#careers">Careers</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="link-group">
-                        <h4>Resources</h4>
-                        <ul>
-                            <li><a href="#blog">Blog</a></li>
-                            <li><a href="#documentation">Documentation</a></li>
-                            <li><a href="#support">Support</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <!-- Footer links removed -->
             </div>
             <div class="copyright">
                 <p>&copy; 2025 DARKCUBE Systems. All rights reserved.</p>

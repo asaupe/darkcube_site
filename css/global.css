@@ -16,6 +16,7 @@
     --spacing-md: 1rem;
     --spacing-lg: 2rem;
     --spacing-xl: 4rem;
+    --spacing-xxl: 6rem;
     
     /* Font variables */
     --font-primary: 'Inter', sans-serif;
@@ -241,6 +242,10 @@ section {
     margin-left: auto;
     margin-right: auto;
     font-weight: 500;
+}
+
+.hero-workflow-diagram {
+    margin: var(--spacing-xl) auto; /* Increased from spacing-xl */
 }
 
 .cta-group {
@@ -963,6 +968,113 @@ footer {
 .ai-brain-icon i {
     font-size: 5rem;
     color: var(--tertiary-blue);
+}
+
+.ai-highlight {
+    margin: var(--spacing-xl) auto var(--spacing-lg);
+    text-align: center;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+}
+
+.ai-condensed-tagline {
+    color: var(--tertiary-blue);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.ai-condensed-text {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+.benefits-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.benefit-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    font-size: 2rem;
+    color: var(--tertiary-blue);
+    margin-bottom: var(--spacing-md);
+    display: block;
+}
+
+.benefit-item h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.config-visual-container {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    margin-top: var(--spacing-xl);
+}
+
+.config-visual-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.config-visual-header h3 {
+    color: var(--tertiary-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Make workflow smaller in this context */
+.why-us-section .config-workflow-container {
+    margin: var(--spacing-lg) auto;
+    max-width: 800px;
+}
+
+/* Why Operations Teams Choose DARKCUBE - With white background */
+.why-choose-section {
+    background-color: var(--neutral-light);
+    color: var(--text-secondary);
+    padding: var(--spacing-xl) 0;
+}
+
+/* Dark cards on light background */
+.why-choose-section .benefit-item {
+    background-color: white;
+    color: var(--text-secondary);
+    box-shadow: var(--box-shadow);
+}
+
+.why-choose-section .benefit-item h3 {
+    color: var(--primary-dark);
+}
+
+/* Update config workflow container for light background */
+.why-choose-section .config-workflow-container {
+    background-color: rgba(0, 102, 204, 0.05);
+}
+
+.why-choose-section .config-visual-container {
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+.why-choose-section .config-visual-header h3 {
+    color: var(--primary-blue);
 }
 
 /* Responsive adjustments for diagram */

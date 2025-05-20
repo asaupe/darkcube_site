@@ -215,6 +215,26 @@ section {
     margin-right: auto;
 }
 
+.hero-section .tagline {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--tertiary-blue);
+    margin-bottom: var(--spacing-md);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-section .subhead-secondary {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--tertiary-blue);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+}
+
 .cta-group {
     display: flex;
     justify-content: center;
@@ -558,7 +578,239 @@ footer {
     margin-bottom: var(--spacing-md);
 }
 
-/* Responsive design */
+/* Improved Workflow Diagram - Horizontal layout with grouped outputs */
+.workflow-diagram {
+    margin: var(--spacing-xl) 0;
+    text-align: center;
+    position: relative;
+}
+
+.workflow-diagram h3 {
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.8rem;
+    color: var(--tertiary-blue);
+}
+
+.diagram-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+}
+
+.diagram-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+/* Colorful icon boxes */
+.icon-box {
+    width: 100px;
+    height: 100px;
+    background-color: #FFCC33;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.icon-box.blue {
+    background-color: #3498db;
+}
+
+.icon-box.green {
+    background-color: #2ecc71;
+}
+
+.icon-box.purple {
+    background-color: #9b59b6;
+}
+
+.icon-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+.icon-box i {
+    font-size: 3rem;
+    color: white;
+}
+
+.diagram-item h4 {
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Arrow styling with animation */
+.connection-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    flex-shrink: 0;
+}
+
+.connection-arrow {
+    font-size: 2rem;
+    color: var(--tertiary-blue);
+}
+
+.connection-arrow.pulse {
+    animation: pulse-arrow 2s infinite;
+}
+
+@keyframes pulse-arrow {
+    0% { opacity: 0.6; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.1); }
+    100% { opacity: 0.6; transform: scale(0.9); }
+}
+
+/* Center DarkCube box with glow effect */
+.center {
+    position: relative;
+    margin: 0 var(--spacing-md);
+    z-index: 2;
+}
+
+/* Simplified behavioral model label */
+.behavioral-model-label {
+    position: absolute;
+    top: -45px;
+    width: 100%;
+    text-align: center;
+    color: var(--tertiary-blue);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Logo in darkcube box */
+.darkcube-logo {
+    max-width: 95%;
+    max-height: 95%;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 0 10px rgba(102, 204, 255, 0.6));
+}
+
+/* Adjust the darkcube-box to maintain original layout */
+.darkcube-box {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(102, 204, 255, 0.4);
+}
+
+.cube-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(102, 204, 255, 0.3) 0%, transparent 70%);
+    animation: pulse-glow 3s infinite;
+}
+
+@keyframes pulse-glow {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.3; }
+}
+
+.darkcube-box h4 {
+    font-size: 1.8rem;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Modern System Container with outputs */
+.modern-system-container {
+    position: relative;
+    border: 2px dashed var(--tertiary-blue);
+    border-radius: 20px;
+    padding: 30px 20px 20px;
+    background-color: rgba(102, 204, 255, 0.1);
+}
+
+.modern-system-label {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-dark);
+    color: var(--tertiary-blue);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    white-space: nowrap;
+    border: 1px solid var(--tertiary-blue);
+}
+
+.modern-outputs {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+/* Mobile workflow explanation */
+.mobile-workflow-explanation {
+    display: none;
+    padding: var(--spacing-lg);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+    margin: var(--spacing-lg) 0;
+}
+
+/* Responsive adjustments for diagram */
+@media (max-width: 1100px) {
+    .diagram-container {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+    
+    .connection-wrapper {
+        transform: rotate(90deg);
+    }
+    
+    .modern-system-container {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Hide complex diagram on very small screens */
+    .workflow-diagram {
+        display: none;
+    }
+    
+    /* Show simplified alternative explanation */
+    .mobile-workflow-explanation {
+        display: block;
+        text-align: center;
+        margin: var(--spacing-lg) 0;
+    }
+}
+
+/* General responsive adjustments */
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;

@@ -9,13 +9,21 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('nav').classList.toggle('active');
     });
     
-    // Smooth scrolling for anchor links
+    // Smooth scrolling for anchor links with header offset
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                target.scrollIntoView({
+                // Get header height to offset scroll position
+                const headerHeight = document.querySelector('header').offsetHeight;
+                
+                // Calculate the target position with offset
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                
+                // Scroll to that position
+                window.scrollTo({
+                    top: targetPosition,
                     behavior: 'smooth'
                 });
                 

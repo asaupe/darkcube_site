@@ -9,6 +9,7 @@
     --neutral-dark: #333333;      /* Dark gray */
     --text-primary: #ffffff;      /* Primary text on dark bg */
     --text-secondary: #121212;    /* Primary text on light bg */
+    --success-color: #4CAF50; /* Success message color */
     
     /* Spacing variables */
     --spacing-xs: 0.25rem;
@@ -592,15 +593,9 @@ footer {
     visibility: visible;
 }
 
-/* Form success message */
-.form-success {
-    text-align: center;
-    padding: var(--spacing-lg);
-}
-
 .form-success i {
-    font-size: 3rem;
-    color: var(--tertiary-blue);
+    color: var(--success-color);
+    font-size: 4rem; /* Using rem instead of pixels */
     margin-bottom: var(--spacing-md);
 }
 
@@ -1079,27 +1074,59 @@ footer {
 
 .form-success {
     text-align: center;
-    padding: 40px;
+    padding: var(--spacing-xl);
     background: rgba(255,255,255,0.1);
     border-radius: 8px;
 }
 
-.form-success i {
-    color: #4CAF50;
-    font-size: 64px;
-    margin-bottom: 20px;
-}
-
 .form-success h2 {
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing-md);
 }
 
 .form-success p {
-    margin-bottom: 30px;
+    margin-bottom: var(--spacing-lg);
 }
 
 .thanks-page .contact-section {
     padding-top: 180px; /* Increased to avoid header overlap */
+}
+
+.section-intro, 
+.hero-section .subhead,
+.hero-section .tagline,
+.hero-section .subhead-secondary,
+.about-content p {
+    max-width: 70ch; /* Optimal reading width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* IMPROVEMENT 3: Better visual separation between sections */
+.product-section,
+.configuration-section,
+.why-choose-section,
+.use-cases-section,
+.about-section {
+    position: relative;
+}
+
+.product-features,
+.legacy-problems,
+.tech-features,
+.differentiators,
+.benefits-list {
+    gap: calc(var(--spacing-lg) + 0.5rem); /* Increased from var(--spacing-lg) */
+}
+
+section h2 {
+    margin-bottom: var(--spacing-lg); /* Use existing variable instead of 2rem */
+}
+
+.feature, 
+.problem, 
+.use-case,
+.benefit-item {
+    padding: calc(var(--spacing-lg) + var(--spacing-xs)); /* Slightly larger than default */
 }
 
 /* Responsive adjustments for diagram */
@@ -1135,6 +1162,10 @@ footer {
 
 /* General responsive adjustments */
 @media (max-width: 768px) {
+    section {
+        padding: var(--spacing-lg) 0; /* Use lg instead of xl for mobile */
+    }
+
     h1 {
         font-size: 2rem;
     }

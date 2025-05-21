@@ -75,48 +75,83 @@ document.addEventListener('componentsReady', function() {
         });
     }
     
-    // Form submission
+    // Handle form submission with Formspree
     const form = document.getElementById('demo-request');
     if (form) {
+        console.log('Form handler attached');
+        
         form.addEventListener('submit', function(e) {
-            e.preventDefault();
+            e.preventDefault(); // Stop normal form submission
+            console.log('Form submitted via JS');
             
-            // Form validation
-            const name = document.getElementById('name')?.value.trim() || '';
-            const company = document.getElementById('company')?.value.trim() || '';
-            const email = document.getElementById('email')?.value.trim() || '';
-            const message = document.getElementById('message')?.value.trim() || '';
-            
-            if (!name || !company || !email) {
-                alert('Please fill out all required fields.');
-                return;
+            // Change button text and disable
+            const submitButton = this.querySelector('button[type="submit"]');
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.innerText = 'Sending...';
             }
             
-            // Updated email address
-            const mailtoLink = `mailto:arne@darkcubesystems.com?subject=DARKCUBE Demo Request from ${name}&body=Name: ${name}%0D%0ACompany: ${company}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+            // Get form data
+            const formData = new FormData(form);
             
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            form.innerHTML = `
-                <div class="form-success">
-                    <i class="fas fa-check-circle"></i>
-                    <h3>Thank you for your request!</h3>
-                    <p>We've received your information and will contact you shortly to schedule your demo.</p>
-                </div>
-            `;
+            // Send to Formspree via fetch
+            fetch('https://formspree.io/f/xyzwaypy', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Success - clear form and redirect
+                    form.reset();
+                    console.log('Form submitted successfully!');
+                    
+                    // Redirect to thanks page
+                    window.location.href = './thanks.html';
+                } else {
+                    // Error handling
+                    response.json().then(data => {
+                        if (data.errors) {
+                            // Show specific errors
+                            alert(data.errors.map(error => error.message).join(', '));
+                        } else {
+                            // Generic error message
+                            alert('Something went wrong. Please try again.');
+                        }
+                    })
+                    .catch(() => {
+                        alert('Something went wrong. Please try again.');
+                    })
+                    .finally(() => {
+                        // Reset button regardless of error type
+                        if (submitButton) {
+                            submitButton.disabled = false;
+                            submitButton.innerText = 'Request Demo';
+                        }
+                    });
+                }
+            })
+            .catch(error => {
+                // Network errors
+                console.error('Error:', error);
+                alert('Network error. Please check your connection and try again.');
+                
+                // Reset button
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.innerText = 'Request Demo';
+                }
+            });
         });
     }
 });
 
-// Fallback in case components never load
+// Fallback if componentsReady never fires
 document.addEventListener('DOMContentLoaded', function() {
-    // Set a timeout to check if components loaded
     setTimeout(() => {
-        // If the componentsReady event hasn't fired yet, initialize anyway
         if (!window.componentsInitialized) {
-            console.log('Components not detected after timeout, initializing main.js anyway');
-            // Dispatch the event manually to trigger initialization
             document.dispatchEvent(new CustomEvent('componentsReady'));
         }
     }, 2000);

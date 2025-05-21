@@ -1077,6 +1077,31 @@ footer {
     color: var(--primary-blue);
 }
 
+.form-success {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+}
+
+.form-success i {
+    color: #4CAF50;
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.form-success h2 {
+    margin-bottom: 20px;
+}
+
+.form-success p {
+    margin-bottom: 30px;
+}
+
+.thanks-page .contact-section {
+    padding-top: 180px; /* Increased to avoid header overlap */
+}
+
 /* Responsive adjustments for diagram */
 @media (max-width: 1100px) {
     .diagram-container {

@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     console.log('Header height measured as:', headerHeight, 'pixels');
                     
                     // IMPROVED OFFSET: Increase offset to prevent seeing previous section
-                    const scrollOffset = headerHeight + 0; // Increased from 30 to 50
-                    
+                    const scrollOffset = headerHeight + 0; // Added 0px padding
+
                     // Handle cross-page navigation if there's a hash in the URL
                     if (window.location.hash) {
                         const targetId = window.location.hash;
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     allNavLinks.forEach(link => {
                         link.addEventListener('click', function(e) {
-                            // FIXED: Define href variable first
+                            // Define href variable first
                             const href = this.getAttribute('href');
                             console.log('Link clicked:', href);
                             
@@ -75,6 +75,10 @@ document.addEventListener('DOMContentLoaded', function() {
                                 e.preventDefault();
                             } else {
                                 // Let the browser handle navigation to other pages
+                                // CLOSE MENU BEFORE NAVIGATION to other pages
+                                if (nav && nav.classList.contains('active')) {
+                                    nav.classList.remove('active');
+                                }
                                 return;
                             }
                             
@@ -82,6 +86,11 @@ document.addEventListener('DOMContentLoaded', function() {
                             if (!targetElement) {
                                 console.error('Target element not found:', targetId);
                                 return;
+                            }
+                            
+                            // CLOSE MENU AFTER CLICK on same-page links
+                            if (nav && nav.classList.contains('active')) {
+                                nav.classList.remove('active');
                             }
                             
                             // IMPROVED OFFSET: Use the same increased offset

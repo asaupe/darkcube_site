@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     console.log('Header height measured as:', headerHeight, 'pixels');
                     
                     // IMPROVED OFFSET: Increase offset to prevent seeing previous section
-                    const scrollOffset = headerHeight + 0; // Added 0px padding
+                    const scrollOffset = headerHeight + 20; // Added 0px padding
 
                     // Handle cross-page navigation if there's a hash in the URL
                     if (window.location.hash) {
